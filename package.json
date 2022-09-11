@@ -1,0 +1,21 @@
+{
+  "name": "@vlrjs/website",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "devDependencies": {
+    "@astrojs/vercel": "^0.2.1",
+    "astro": "^1.0.0-beta.27",
+    "dom-parser": "^0.1.6",
+    "html-escaping": "^1.0.1",
+    "moment-timezone": "^0.5.37"
+  },
+  "dependencies": {
+    "latest-version": "^7.0.0"
+  }
+}
