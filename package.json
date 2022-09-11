@@ -1,7 +1,6 @@
 {
   "name": "@vlrjs/website",
   "version": "1.0.0",
-  "private": true,
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
