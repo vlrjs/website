@@ -28,22 +28,219 @@ const version = await latestVersion("vlr.js");
         </span>
       </div>
       <div class="m-middle">
-        <h1 class="cinzel">Install</h1>
-        <code class="terminal"><npm></npm> install vlr.js</code>
-        <code class="terminal"><yarn></yarn> add vlr.js</code>
-        <code class="terminal"><pnpm></pnpm> add vlr.js</code>
-        <h1 class="cinzel">Usage</h1>
-        <code class="">
-          <span style="color:#FF657C">import</span>
-          <span style="color:#D8DEE9">VLR</span>
-          <span style="color:#FF657C">from</span>
-          <span style="color:#16C082">'vlr.js'</span><span style="color:#C7C5D3"
-            >;</span
-          >
+        <h1 class="cinzel" id="install"><a href="#install">Install</a></h1>
+        <code>
+          <span class="line terminal">
+            <span class="npm">npm</span> install vlr.js
+          </span>
         </code>
-        <h1 class="cinzel">API Reference</h1>
-        <h2>getPage()</h2>
-        <code> </code>
+        <code>
+          <span class="line terminal">
+            <span class="yarn">yarn</span> add vlr.js
+          </span>
+        </code>
+        <code>
+          <span class="line terminal">
+            <span class="pnpm">pnpm</span> add vlr.js
+          </span>
+        </code>
+        <h1 class="cinzel" id="apiRef"><a href="#apiRef">Api Reference</a></h1>
+        <h2 id="getPage"><a href="#getPage">getPage()</a></h2>
+        <code id="getPage" style="width: 95%;">
+          <span class="line">
+            <span style="color:#FF657C">import</span>
+            <span style="color:#D8DEE9">VLR</span>
+            <span style="color:#FF657C">from</span>
+            <span style="color:#16C082">'vlr.js'</span><span
+              style="color:#C7C5D3">;</span
+            >
+          </span>
+          <span class="line">
+            <span style="color:#FF657C">const</span>
+            <span style="color:#D8DEE9">match =</span>
+            <span style="color:#D8DEE9"
+              ><span style="color:#FF657C">await</span>&nbsp;VLR.</span
+            ><span style="color:#66ADFF">getPage</span><span
+              ><span style="color:#D8DEE9">(</span><span style="color:#16C082"
+                >'/6'</span
+              ><span style="color:#D8DEE9">);</span>
+            </span>
+          </span>
+          <span class="line"></span>
+          <span class="line">
+            <span style="color:#D8DEE9">console.</span><span
+              style="color:#66ADFF"
+              >log<span
+                ><span style="color:#D8DEE9">(</span><span style="color:#D8DEE9"
+                  >match</span
+                ><span style="color:#D8DEE9">);</span>
+              </span>
+            </span>
+          </span>
+          <div style="display:none;">
+            <span class="line">
+              <span style="color:#969595;">/* {"{"}</span>
+            </span>
+            <span class="line">
+              <span style="color:#969595;tab-size: 2;"
+                >&nbsp;&nbsp;type: 2,</span
+              >
+            </span>
+            <span class="line">
+              <span style="color:#969595;tab-size: 2;"
+                >&nbsp;&nbsp;data: {"{"}
+              </span>
+            </span>
+            <span class="line">
+              <span style="color:#969595;tab-size: 2;"
+                >&nbsp;&nbsp;&nbsp;&nbsp;teams: [</span
+              >
+            </span>
+            <span class="line">
+              <span style="color:#969595;tab-size: 2;"
+                >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{` {`}
+              </span>
+            </span>
+            <span class="line">
+              <span style="color:#969595;tab-size: 2;"
+                >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{
+                  ` name: "Obey Alliance",`
+                }
+              </span>
+            </span>
+            <span class="line">
+              <span style="color:#969595;tab-size: 2;"
+                >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{
+                  ` link: "https://vlr.gg/team/11/obey-alliance"`
+                }
+              </span>
+            </span>
+            <span class="line">
+              <span style="color:#969595;tab-size: 2;"
+                >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{` },`}
+              </span>
+            </span>
+            <span class="line">
+              <span style="color:#969595;tab-size: 2;"
+                >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{` {`}
+              </span>
+            </span>
+            <span class="line">
+              <span style="color:#969595;tab-size: 2;"
+                >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{` name: "Orgless",`}
+              </span>
+            </span>
+            <span class="line">
+              <span style="color:#969595;tab-size: 2;"
+                >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{
+                  ` link: "https://vlr.gg/team/6/orgless"`
+                }
+              </span>
+            </span>
+            <span class="line">
+              <span style="color:#969595;tab-size: 2;"
+                >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{` }`}
+              </span>
+            </span>
+            <span class="line">
+              <span style="color:#969595;tab-size: 2;"
+                >&nbsp;&nbsp;&nbsp;&nbsp;{`],`}
+              </span>
+            </span>
+            <span class="line">
+              <span style="color:#969595;tab-size: 2;"
+                >&nbsp;&nbsp;&nbsp;&nbsp;notes: ["final", "Bo1"],</span
+              >
+            </span>
+            <span class="line">
+              <span style="color:#969595;tab-size: 2;"
+                >&nbsp;&nbsp;&nbsp;&nbsp;maps: "Unknown",</span
+              >
+            </span>
+            <span class="line">
+              <span style="color:#969595;tab-size: 2;"
+                >&nbsp;&nbsp;&nbsp;&nbsp;vods: "Not Available",</span
+              >
+            </span>
+            <span class="line">
+              <span style="color:#969595;tab-size: 2;"
+                >&nbsp;&nbsp;&nbsp;&nbsp;winner: {"{"}
+              </span>
+            </span>
+            <span class="line">
+              <span style="color:#969595;tab-size: 2;"
+                >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{` name: "Obey Alliance",`}
+              </span>
+            </span>
+            <span class="line">
+              <span style="color:#969595;tab-size: 2;"
+                >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{
+                  ` link: "https://vlr.gg/team/11/obey-alliance"`
+                }
+              </span>
+            </span>
+            <span class="line">
+              <span style="color:#969595;tab-size: 2;"
+                >&nbsp;&nbsp;&nbsp;&nbsp;{"},"}
+              </span>
+            </span>
+            <span class="line">
+              <span style="color:#969595;tab-size: 2;"
+                >&nbsp;&nbsp;&nbsp;&nbsp;patch: "Not Available",</span
+              >
+            </span>
+            <span class="line">
+              <span style="color:#969595;tab-size: 2;"
+                >&nbsp;&nbsp;&nbsp;&nbsp;time: "Saturday, May 2nd - 1:00 PM
+                EDT",</span
+              >
+            </span>
+            <span class="line">
+              <span style="color:#969595;tab-size: 2;"
+                >&nbsp;&nbsp;&nbsp;&nbsp;status: "Complete",</span
+              >
+            </span>
+            <span class="line">
+              <span style="color:#969595;tab-size: 2;"
+                >&nbsp;&nbsp;&nbsp;&nbsp;event: {"{ "}
+              </span>
+            </span>
+            <span class="line">
+              <span style="color:#969595;tab-size: 2;"
+                >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name: "Valhalla
+                Invitational",</span
+              >
+            </span>
+            <span class="line">
+              <span style="color:#969595;tab-size: 2;"
+                >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;series: "Week 1: Group A",</span
+              >
+            </span>
+            <span class="line">
+              <span style="color:#969595;tab-size: 2;"
+                >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;image:
+                "https//owcdn.net/img/5ee1f8133ce4f.jpg",</span
+              >
+            </span>
+            <span class="line">
+              <span style="color:#969595;tab-size: 2;"
+                >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;link:
+                "https://vlr.gg/event/2/valhalla-invitational/week-1"</span
+              >
+            </span>
+            <span class="line">
+              <span style="color:#969595;tab-size: 2;"
+                >&nbsp;&nbsp;&nbsp;&nbsp;{`},`}
+              </span>
+            </span>
+            <span class="line">
+              <span style="color:#969595;tab-size: 2;">&nbsp;&nbsp;{"}"}</span>
+            </span>
+            <span class="line">
+              <span style="color:#969595;">{"}"} */</span>
+            </span>
+          </div>
+        </code>
       </div>
     </div>
   </div>
@@ -99,7 +296,7 @@ const version = await latestVersion("vlr.js");
     display: block;
     max-width: 90%;
     margin: 0 auto 0 auto;
-    padding-top: 64px;
+    padding-top: 48px;
     font-family: "noto serif jp";
   }
   .mainCnt .m-middle > h1 {
@@ -107,11 +304,12 @@ const version = await latestVersion("vlr.js");
   }
   .mainCnt .m-middle h1 {
     padding-bottom: 16px;
+    font-size: 3.125rem;
   }
   .mainCnt .m-middle h2 {
-    font-size: 1.6rem;
+    font-size: 1.75rem;
     display: block;
-    margin-bottom: 9px;
+    margin-bottom: 16px;
   }
   .mainCnt .api-ref::before {
     display: block;
@@ -151,37 +349,50 @@ const version = await latestVersion("vlr.js");
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
   }
-  code npm::after {
+  code.large {
+    width: 138%;
+  }
+  code .line {
+    display: inline-block;
+    line-height: 1.5;
+    padding-inline-start: 1.25rem;
+    min-width: calc(100% + 5.25rem);
+  }
+  code copy {
+    user-select: none;
+    font-size: 0px;
+  }
+  code copy::after {
+    content: "";
+    display: inline-block;
+    float: right;
+    background: url("../images/copy_icon.png") no-repeat 0 0 / 100%;
+    width: 20px;
+    aspect-ratio: 1;
+    padding-top: -3px;
+    filter: invert(1);
+    cursor: pointer;
+    transition: 0.8s ease;
+    opacity: 0;
+  }
+  code:hover copy::after {
+    opacity: 1;
+  }
+  code .npm {
     content: "npm";
     color: #c53635;
   }
-  code yarn::after {
+  code .yarn {
     content: "yarn";
     color: #2c8ebb;
   }
-  code pnpm::after {
+  code .pnpm {
     content: "pnpm";
     color: #f9b66b;
   }
-  code.terminal::before {
+  .line.terminal::before {
     content: "> ";
     color: #fff;
-  }
-
-  code import::after {
-    content: "import";
-    color: #ff657c;
-  }
-  code vlr::after {
-    content: "VLR";
-    color: #d8dee9;
-  }
-  code from::after {
-    content: "from";
-    color: #ff657c;
-  }
-  code vlrjs::after {
-    content: '"vlr.js"';
-    color: #16c082;
+    opacity: 0.5;
   }
 </style>
