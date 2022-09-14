@@ -46,15 +46,16 @@ const version = await latestVersion("vlr.js");
         </code>
         <h1 class="cinzel" id="apiRef"><a href="#apiRef">Api Reference</a></h1>
         <h2 id="getPage"><a href="#getPage">getPage()</a></h2>
-        <code id="getPage" style="width: 95%;">
-          <span class="line">
-            <span style="color:#FF657C">import</span>
+        <code id="getPage">
+          <span class="line"
+            ><span style="color:#FF657C">import</span>
             <span style="color:#D8DEE9">VLR</span>
             <span style="color:#FF657C">from</span>
             <span style="color:#16C082">'vlr.js'</span><span
               style="color:#C7C5D3">;</span
             >
           </span>
+          <br />
           <span class="line">
             <span style="color:#FF657C">const</span>
             <span style="color:#D8DEE9">match =</span>
@@ -66,7 +67,8 @@ const version = await latestVersion("vlr.js");
               ><span style="color:#D8DEE9">);</span>
             </span>
           </span>
-          <span class="line"></span>
+          <br />
+          <br />
           <span class="line">
             <span style="color:#D8DEE9">console.</span><span
               style="color:#66ADFF"
@@ -77,169 +79,7 @@ const version = await latestVersion("vlr.js");
               </span>
             </span>
           </span>
-          <div style="display:none;">
-            <span class="line">
-              <span style="color:#969595;">/* {"{"}</span>
-            </span>
-            <span class="line">
-              <span style="color:#969595;tab-size: 2;"
-                >&nbsp;&nbsp;type: 2,</span
-              >
-            </span>
-            <span class="line">
-              <span style="color:#969595;tab-size: 2;"
-                >&nbsp;&nbsp;data: {"{"}
-              </span>
-            </span>
-            <span class="line">
-              <span style="color:#969595;tab-size: 2;"
-                >&nbsp;&nbsp;&nbsp;&nbsp;teams: [</span
-              >
-            </span>
-            <span class="line">
-              <span style="color:#969595;tab-size: 2;"
-                >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{` {`}
-              </span>
-            </span>
-            <span class="line">
-              <span style="color:#969595;tab-size: 2;"
-                >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{
-                  ` name: "Obey Alliance",`
-                }
-              </span>
-            </span>
-            <span class="line">
-              <span style="color:#969595;tab-size: 2;"
-                >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{
-                  ` link: "https://vlr.gg/team/11/obey-alliance"`
-                }
-              </span>
-            </span>
-            <span class="line">
-              <span style="color:#969595;tab-size: 2;"
-                >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{` },`}
-              </span>
-            </span>
-            <span class="line">
-              <span style="color:#969595;tab-size: 2;"
-                >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{` {`}
-              </span>
-            </span>
-            <span class="line">
-              <span style="color:#969595;tab-size: 2;"
-                >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{` name: "Orgless",`}
-              </span>
-            </span>
-            <span class="line">
-              <span style="color:#969595;tab-size: 2;"
-                >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{
-                  ` link: "https://vlr.gg/team/6/orgless"`
-                }
-              </span>
-            </span>
-            <span class="line">
-              <span style="color:#969595;tab-size: 2;"
-                >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{` }`}
-              </span>
-            </span>
-            <span class="line">
-              <span style="color:#969595;tab-size: 2;"
-                >&nbsp;&nbsp;&nbsp;&nbsp;{`],`}
-              </span>
-            </span>
-            <span class="line">
-              <span style="color:#969595;tab-size: 2;"
-                >&nbsp;&nbsp;&nbsp;&nbsp;notes: ["final", "Bo1"],</span
-              >
-            </span>
-            <span class="line">
-              <span style="color:#969595;tab-size: 2;"
-                >&nbsp;&nbsp;&nbsp;&nbsp;maps: "Unknown",</span
-              >
-            </span>
-            <span class="line">
-              <span style="color:#969595;tab-size: 2;"
-                >&nbsp;&nbsp;&nbsp;&nbsp;vods: "Not Available",</span
-              >
-            </span>
-            <span class="line">
-              <span style="color:#969595;tab-size: 2;"
-                >&nbsp;&nbsp;&nbsp;&nbsp;winner: {"{"}
-              </span>
-            </span>
-            <span class="line">
-              <span style="color:#969595;tab-size: 2;"
-                >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{` name: "Obey Alliance",`}
-              </span>
-            </span>
-            <span class="line">
-              <span style="color:#969595;tab-size: 2;"
-                >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{
-                  ` link: "https://vlr.gg/team/11/obey-alliance"`
-                }
-              </span>
-            </span>
-            <span class="line">
-              <span style="color:#969595;tab-size: 2;"
-                >&nbsp;&nbsp;&nbsp;&nbsp;{"},"}
-              </span>
-            </span>
-            <span class="line">
-              <span style="color:#969595;tab-size: 2;"
-                >&nbsp;&nbsp;&nbsp;&nbsp;patch: "Not Available",</span
-              >
-            </span>
-            <span class="line">
-              <span style="color:#969595;tab-size: 2;"
-                >&nbsp;&nbsp;&nbsp;&nbsp;time: "Saturday, May 2nd - 1:00 PM
-                EDT",</span
-              >
-            </span>
-            <span class="line">
-              <span style="color:#969595;tab-size: 2;"
-                >&nbsp;&nbsp;&nbsp;&nbsp;status: "Complete",</span
-              >
-            </span>
-            <span class="line">
-              <span style="color:#969595;tab-size: 2;"
-                >&nbsp;&nbsp;&nbsp;&nbsp;event: {"{ "}
-              </span>
-            </span>
-            <span class="line">
-              <span style="color:#969595;tab-size: 2;"
-                >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name: "Valhalla
-                Invitational",</span
-              >
-            </span>
-            <span class="line">
-              <span style="color:#969595;tab-size: 2;"
-                >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;series: "Week 1: Group A",</span
-              >
-            </span>
-            <span class="line">
-              <span style="color:#969595;tab-size: 2;"
-                >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;image:
-                "https//owcdn.net/img/5ee1f8133ce4f.jpg",</span
-              >
-            </span>
-            <span class="line">
-              <span style="color:#969595;tab-size: 2;"
-                >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;link:
-                "https://vlr.gg/event/2/valhalla-invitational/week-1"</span
-              >
-            </span>
-            <span class="line">
-              <span style="color:#969595;tab-size: 2;"
-                >&nbsp;&nbsp;&nbsp;&nbsp;{`},`}
-              </span>
-            </span>
-            <span class="line">
-              <span style="color:#969595;tab-size: 2;">&nbsp;&nbsp;{"}"}</span>
-            </span>
-            <span class="line">
-              <span style="color:#969595;">{"}"} */</span>
-            </span>
-          </div>
+          <br />
         </code>
       </div>
     </div>
@@ -354,9 +194,11 @@ const version = await latestVersion("vlr.js");
   }
   code .line {
     display: inline-block;
-    line-height: 1.5;
+    line-height: 1.25;
+    padding-inline-start: 0.25rem;
+  }
+  code .line.terminal {
     padding-inline-start: 1.25rem;
-    max-width: calc(100% + 5.25rem);
   }
   code copy {
     user-select: none;
@@ -380,7 +222,7 @@ const version = await latestVersion("vlr.js");
   }
   code .npm {
     content: "npm";
-    color: #c53635;
+    color: #e82626;
   }
   code .yarn {
     content: "yarn";
