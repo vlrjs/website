@@ -31,6 +31,10 @@ figure {
     padding: 0
 }
 
+main {
+    letter-spacing: 0;
+}
+
 table {
     border-collapse: collapse;
     border-spacing: 0
