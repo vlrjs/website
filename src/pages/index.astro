@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import { Code } from "astro/components";
 import latestVersion from "latest-version";
+import Pkgs from "../layouts/Pkgs.astro";
 
 const version = await latestVersion("vlr.js");
 ---
@@ -29,24 +30,29 @@ const version = await latestVersion("vlr.js");
       </div>
       <div class="m-middle">
         <h1 class="cinzel" id="install"><a href="#install">Install</a></h1>
-        <code>
-          <span class="line terminal">
-            <span class="npm">npm</span> install vlr.js
-          </span>
-        </code>
-        <code>
-          <span class="line terminal">
-            <span class="yarn">yarn</span> add vlr.js
-          </span>
-        </code>
-        <code>
-          <span class="line terminal">
-            <span class="pnpm">pnpm</span> add vlr.js
-          </span>
-        </code>
+        <Pkgs>
+          <figcaption class="header" slot="npm"></figcaption>
+          <code class="extra" slot="npm">
+            <span class="line terminal">
+              <span class="npm">npm</span> install vlr.js
+            </span>
+          </code>
+          <figcaption class="header" slot="yarn"></figcaption>
+          <code class="extra" slot="yarn">
+            <span class="line terminal">
+              <span class="yarn">yarn</span> add vlr.js
+            </span>
+          </code>
+          <figcaption class="header" slot="pnpm"></figcaption>
+          <code class="extra" slot="pnpm">
+            <span class="line terminal">
+              <span class="pnpm">pnpm</span> add vlr.js
+            </span>
+          </code>
+        </Pkgs>
         <h1 class="cinzel" id="apiRef"><a href="#apiRef">Api Reference</a></h1>
         <h2 id="getPage"><a href="#getPage">getPage()</a></h2>
-        <code id="getPage">
+        <code class="extra">
           <span class="line"
             ><span style="color:#FF657C">import</span>
             <span style="color:#D8DEE9">VLR</span>
@@ -81,6 +87,76 @@ const version = await latestVersion("vlr.js");
           </span>
           <br />
         </code>
+        <h2 id="getMatches"><a href="#getMatches">getMatches()</a></h2>
+        <code class="extra">
+          <span class="line"
+            ><span style="color:#FF657C">import</span>
+            <span style="color:#D8DEE9">VLR</span>
+            <span style="color:#FF657C">from</span>
+            <span style="color:#16C082">'vlr.js'</span><span
+              style="color:#C7C5D3">;</span
+            >
+          </span>
+          <br />
+          <span class="line">
+            <span style="color:#FF657C">const</span>
+            <span style="color:#D8DEE9">matches =</span>
+            <span style="color:#D8DEE9"
+              ><span style="color:#FF657C">await</span>&nbsp;VLR.</span
+            ><span style="color:#66ADFF">getMatches</span><span
+              ><span style="color:#D8DEE9">();</span>
+            </span>
+          </span>
+          <br />
+          <br />
+          <span class="line">
+            <span style="color:#D8DEE9">console.</span><span
+              style="color:#66ADFF"
+              >log<span
+                ><span style="color:#D8DEE9">(</span><span style="color:#D8DEE9"
+                  >matches</span
+                ><span style="color:#D8DEE9">);</span>
+              </span>
+            </span>
+          </span>
+          <br />
+        </code>
+        <h2 id="getMatchResults">
+          <a href="#getMatchResults">getMatchResults()</a>
+        </h2>
+        <code class="extra">
+          <span class="line"
+            ><span style="color:#FF657C">import</span>
+            <span style="color:#D8DEE9">VLR</span>
+            <span style="color:#FF657C">from</span>
+            <span style="color:#16C082">'vlr.js'</span><span
+              style="color:#C7C5D3">;</span
+            >
+          </span>
+          <br />
+          <span class="line">
+            <span style="color:#FF657C">const</span>
+            <span style="color:#D8DEE9">matchResults =</span>
+            <span style="color:#D8DEE9"
+              ><span style="color:#FF657C">await</span>&nbsp;VLR.</span
+            ><span style="color:#66ADFF">getMatchResults</span><span
+              ><span style="color:#D8DEE9">();</span>
+            </span>
+          </span>
+          <br />
+          <br />
+          <span class="line">
+            <span style="color:#D8DEE9">console.</span><span
+              style="color:#66ADFF"
+              >log<span
+                ><span style="color:#D8DEE9">(</span><span style="color:#D8DEE9"
+                  >matchResults</span
+                ><span style="color:#D8DEE9">);</span>
+              </span>
+            </span>
+          </span>
+          <br />
+        </code>
       </div>
     </div>
   </div>
@@ -95,7 +171,7 @@ const version = await latestVersion("vlr.js");
     text-shadow: 0px 0px 10px #2e89e4;
   }
   .mainCnt {
-    max-width: 640px;
+    max-width: 620px;
     margin: 0 auto;
   }
   .mainCnt .m-head {
@@ -171,9 +247,6 @@ const version = await latestVersion("vlr.js");
     text-align: center;
     direction: rtl;
   }
-</style>
-
-<style is:global>
   code {
     display: block;
     font-family: monospace;
@@ -188,6 +261,27 @@ const version = await latestVersion("vlr.js");
     border-bottom: 2px solid #808080;
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
+  }
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 0.175rem;
+    background-color: #141313;
+    min-height: 3rem;
+    width: 464px;
+    position: relative;
+    z-index: 0;
+  }
+  .header::before {
+    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 16' preserveAspectRatio='xMidYMid meet' fill='rgba(255, 255, 255, 0.15)'%3E%3Ccircle cx='8' cy='8' r='8'/%3E%3Ccircle cx='30' cy='8' r='8'/%3E%3Ccircle cx='52' cy='8' r='8'/%3E%3C/svg%3E");
+    position: absolute;
+    left: 1rem;
+    width: 4rem;
+    line-height: 0;
+  }
+  code.extra {
+    width: 116%;
   }
   code.large {
     width: 138%;

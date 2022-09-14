@@ -1,0 +1,125 @@
+<>
+    <div class="cinzel tabs needs-js">
+        <button id="npm" class="active">Npm</button>
+        <button id="yarn">Yarn</button>
+        <button id="pnpm">Pnpm</button>
+    </div>
+    <div id="_npm" style="display:block;" class="no-js">
+        <slot name="npm" />
+    </div>
+    <div id="_yarn" class="no-js"><slot name="yarn" /></div>
+    <div id="_pnpm" class="no-js"><slot name="pnpm" /></div>
+</>
+<style is:global>
+    .tabs.needs-js {
+        display: none;
+    }
+    #_yarn,
+    #_pnpm,
+    #_npm {
+        display: none;
+    }
+    #_yarn.no-js,
+    #_pnpm.no-js,
+    #_npm.no-js {
+        display: block;
+    }
+    /* NPM */
+    #npm.active ~ #_npm {
+        display: block;
+    }
+    #npm.active ~ #_pnpm {
+        display: none;
+    }
+    #npm.active ~ #_yarn {
+        display: none;
+    }
+    /* Yarn */
+    #yarn.active ~ #_yarn {
+        display: block;
+    }
+    #yarn.active ~ #_pnpm {
+        display: none;
+    }
+    #yarn.active ~ #_npm {
+        display: none;
+    }
+    /* PNPM */
+    #pnpm.active ~ #_pnpm {
+        display: block;
+    }
+    #pnpm.active ~ #_yarn {
+        display: none;
+    }
+    #pnpm.active ~ #_npm {
+        display: none;
+    }
+</style>
+<script is:inline>
+    document.getElementsByClassName("tabs")[0].classList.remove("needs-js");
+    document.getElementById("_npm").classList.remove("no-js");
+    document.getElementById("_yarn").classList.remove("no-js");
+    document.getElementById("_pnpm").classList.remove("no-js");
+    $("#npm").on("click", function () {
+        $("#npm").addClass("active");
+        $("#yarn").removeClass("active");
+        $("#pnpm").removeClass("active");
+        $("#_npm").show();
+        $("#_pnpm").hide();
+        $("#_yarn").hide();
+    });
+    $("#yarn").on("click", function () {
+        $("#yarn").addClass("active");
+        $("#npm").removeClass("active");
+        $("#pnpm").removeClass("active");
+        $("#_npm").hide();
+        $("#_pnpm").hide();
+        $("#_yarn").show();
+    });
+    $("#pnpm").on("click", function () {
+        $("#pnpm").addClass("active");
+        $("#yarn").removeClass("active");
+        $("#npm").removeClass("active");
+        $("#_npm").hide();
+        $("#_pnpm").show();
+        $("#_yarn").hide();
+    });
+</script>
+
+<style>
+    .vh {
+        position: absolute !important;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        width: 1px;
+        margin: -1px;
+        padding: 0;
+        border: 0;
+    }
+    .tabs {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 12px;
+        color: #fff;
+        border-radius: 0.5em;
+    }
+    .tabs button {
+        padding: 0 8px;
+        height: 38px;
+        color: rgb(225, 225, 225);
+        font-family: cinzel, serif;
+        transition: 0.3s ease;
+    }
+    .tabs button::after {
+        background: transparent;
+    }
+    .tabs button.active::after {
+        content: "";
+        display: block;
+        margin: auto;
+        height: 0.9px;
+        width: 100%;
+        background: white;
+    }
+</style>

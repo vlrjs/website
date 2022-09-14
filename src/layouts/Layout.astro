@@ -39,6 +39,9 @@ const nav_list = [{ name: "EPISODES", value: "./episodes/" }];
         <main class="ani active">
           <slot />
         </main>
+        <footer>
+          <span>Copyright &copy; 2022, Marill.</span>
+        </footer>
       </div>
     </div>
     <style is:global>
@@ -48,6 +51,18 @@ const nav_list = [{ name: "EPISODES", value: "./episodes/" }];
         box-sizing: border-box;
         max-height: 999999px;
         outline: none;
+      }
+      footer {
+        display: flex;
+        height: 84px;
+        margin: auto;
+      }
+      footer span {
+        height: 24px;
+        font-size: 1.125rem;
+        line-height: 1;
+        text-align: center;
+        margin: auto;
       }
     </style>
   </body>
