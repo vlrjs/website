@@ -3288,36 +3288,6 @@ const { title } = Astro.props as Props;
       rel="stylesheet"
     />
 
-    <script is:inline>
-      document.getElementsByClassName("tabs")[0].classList.remove("needs-js");
-      document.getElementById("_npm").classList.remove("no-js");
-      document.getElementById("_yarn").classList.remove("no-js");
-      document.getElementById("_pnpm").classList.remove("no-js");
-      $("#npm").on("click", function () {
-        $("#npm").addClass("active");
-        $("#yarn").removeClass("active");
-        $("#pnpm").removeClass("active");
-        $("#_npm").show();
-        $("#_pnpm").hide();
-        $("#_yarn").hide();
-      });
-      $("#yarn").on("click", function () {
-        $("#yarn").addClass("active");
-        $("#npm").removeClass("active");
-        $("#pnpm").removeClass("active");
-        $("#_npm").hide();
-        $("#_pnpm").hide();
-        $("#_yarn").show();
-      });
-      $("#pnpm").on("click", function () {
-        $("#pnpm").addClass("active");
-        $("#yarn").removeClass("active");
-        $("#npm").removeClass("active");
-        $("#_npm").hide();
-        $("#_pnpm").show();
-        $("#_yarn").hide();
-      });
-    </script>
     <style is:inline>
       a {
         text-decoration: none;
