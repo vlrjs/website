@@ -3538,19 +3538,7 @@ const { title } = Astro.props as Props;
         display: none;
       }
     </style>
-  </head>
-  <body id="index" class="active">
-    <div id="topWrap" class="active">
-      <div id="fullWrap" class="active">
-        <main class="ani active">
-          <slot />
-        </main>
-        <footer>
-          <span>Copyright &copy; 2022, Marill.</span>
-        </footer>
-      </div>
-    </div>
-    <style is:global>
+    <style is:inline>
       * {
         margin: 0;
         padding: 0;
@@ -3571,5 +3559,17 @@ const { title } = Astro.props as Props;
         margin: auto;
       }
     </style>
+  </head>
+  <body id="index" class="active">
+    <div id="topWrap" class="active">
+      <div id="fullWrap" class="active">
+        <main class="ani active">
+          <slot />
+        </main>
+        <footer>
+          <span>Copyright &copy; 2022, Marill.</span>
+        </footer>
+      </div>
+    </div>
   </body>
 </html>
