@@ -1,8 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import { Code } from "astro/components";
 import latestVersion from "latest-version";
-import Pkgs from "../layouts/Pkgs.astro";
 
 const version = await latestVersion("vlr.js");
 ---
@@ -13,7 +11,11 @@ const version = await latestVersion("vlr.js");
     <div class="m-content">
       <div class="m-top">
         <span class="m-left">
-          <a>
+          <a
+            href="https://npmjs.org/package/vlr.js"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
             <b>Version:</b>
             {version}
           </a>
@@ -30,26 +32,35 @@ const version = await latestVersion("vlr.js");
       </div>
       <div class="m-middle">
         <h1 class="cinzel" id="install"><a href="#install">Install</a></h1>
-        <Pkgs>
-          <figcaption class="header" slot="npm"></figcaption>
-          <code class="extra" slot="npm">
+        <div class="cinzel tabs needs-js">
+          <button id="npm" class="active">Npm</button>
+          <button id="yarn">Yarn</button>
+          <button id="pnpm">Pnpm</button>
+        </div>
+        <div id="_npm" style="display:block;" class="no-js">
+          <figcaption class="header"></figcaption>
+          <code class="extra">
             <span class="line terminal">
               <span class="npm">npm</span> install vlr.js
             </span>
           </code>
-          <figcaption class="header" slot="yarn"></figcaption>
-          <code class="extra" slot="yarn">
+        </div>
+        <div id="_yarn" class="no-js">
+          <figcaption class="header"></figcaption>
+          <code class="extra">
             <span class="line terminal">
               <span class="yarn">yarn</span> add vlr.js
             </span>
           </code>
-          <figcaption class="header" slot="pnpm"></figcaption>
-          <code class="extra" slot="pnpm">
+        </div>
+        <div id="_pnpm" class="no-js">
+          <figcaption class="header"></figcaption>
+          <code class="extra">
             <span class="line terminal">
               <span class="pnpm">pnpm</span> add vlr.js
             </span>
           </code>
-        </Pkgs>
+        </div>
         <h1 class="cinzel" id="apiRef"><a href="#apiRef">Api Reference</a></h1>
         <h2 id="getPage"><a href="#getPage">getPage()</a></h2>
         <code class="extra">
@@ -161,7 +172,36 @@ const version = await latestVersion("vlr.js");
     </div>
   </div>
 </Layout>
-
+<script>
+  document.getElementsByClassName("tabs")[0].classList.remove("needs-js");
+  document.getElementById("_npm").classList.remove("no-js");
+  document.getElementById("_yarn").classList.remove("no-js");
+  document.getElementById("_pnpm").classList.remove("no-js");
+  $("#npm").on("click", function () {
+    $("#npm").addClass("active");
+    $("#yarn").removeClass("active");
+    $("#pnpm").removeClass("active");
+    $("#_npm").show();
+    $("#_pnpm").hide();
+    $("#_yarn").hide();
+  });
+  $("#yarn").on("click", function () {
+    $("#yarn").addClass("active");
+    $("#npm").removeClass("active");
+    $("#pnpm").removeClass("active");
+    $("#_npm").hide();
+    $("#_pnpm").hide();
+    $("#_yarn").show();
+  });
+  $("#pnpm").on("click", function () {
+    $("#pnpm").addClass("active");
+    $("#yarn").removeClass("active");
+    $("#npm").removeClass("active");
+    $("#_npm").hide();
+    $("#_pnpm").show();
+    $("#_yarn").hide();
+  });
+</script>
 <style is:global>
   a {
     text-decoration: none;
@@ -231,7 +271,7 @@ const version = await latestVersion("vlr.js");
   .mainCnt .api-ref::before {
     display: block;
     content: "Api Reference";
-    font-family: cinzel, serif;
+    font-family: "Cinzel", serif;
     font-size: 2.7rem;
     padding-top: 24px;
   }
@@ -331,5 +371,84 @@ const version = await latestVersion("vlr.js");
     content: "> ";
     color: #fff;
     opacity: 0.5;
+  }
+
+  .vh {
+    position: absolute !important;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+  }
+  .tabs {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 12px;
+    color: #fff;
+    border-radius: 0.5em;
+  }
+  .tabs button {
+    padding: 0 8px;
+    height: 38px;
+    color: rgb(225, 225, 225);
+    font-family: cinzel, serif;
+    transition: 0.3s ease;
+  }
+  .tabs button::after {
+    background: transparent;
+  }
+  .tabs button.active::after {
+    content: "";
+    display: block;
+    margin: auto;
+    height: 0.9px;
+    width: 100%;
+    background: white;
+  }
+  .tabs.needs-js {
+    display: none;
+  }
+  #_yarn,
+  #_pnpm,
+  #_npm {
+    display: none;
+  }
+  #_yarn.no-js,
+  #_pnpm.no-js,
+  #_npm.no-js {
+    display: block;
+  }
+  /* NPM */
+  #npm.active ~ #_npm {
+    display: block;
+  }
+  #npm.active ~ #_pnpm {
+    display: none;
+  }
+  #npm.active ~ #_yarn {
+    display: none;
+  }
+  /* Yarn */
+  #yarn.active ~ #_yarn {
+    display: block;
+  }
+  #yarn.active ~ #_pnpm {
+    display: none;
+  }
+  #yarn.active ~ #_npm {
+    display: none;
+  }
+  /* PNPM */
+  #pnpm.active ~ #_pnpm {
+    display: block;
+  }
+  #pnpm.active ~ #_yarn {
+    display: none;
+  }
+  #pnpm.active ~ #_npm {
+    display: none;
   }
 </style>
