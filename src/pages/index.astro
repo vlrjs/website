@@ -5,7 +5,7 @@ import Layout from "../layouts/Layout.astro";
 <Layout title="vlr.js">
   <div class="mainCnt cinzel">
     <div class="m-head"><span></span></div>
-    <div class="m-content">
+    <div class="m-content ani">
       <div class="m-top">
         <span class="m-left">
           <script is:inline>
@@ -15,7 +15,6 @@ import Layout from "../layouts/Layout.astro";
                 const version = json.version;
                 const el = $("  #version");
                 el.html(`<b>Version</b> ${version}`);
-                el.addClass("active");
               });
           </script>
           <a
