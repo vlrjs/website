@@ -3,9 +3,12 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="vlr.js">
+  <script>
+    $('#content').addClass('active')
+  </script>
   <div class="mainCnt cinzel">
     <div class="m-head"><span></span></div>
-    <div class="m-content ani">
+    <div id="content" class="m-content ani">
       <div class="m-top">
         <span class="m-left">
           <script is:inline>
@@ -19,7 +22,6 @@ import Layout from "../layouts/Layout.astro";
           </script>
           <a
             id="version"
-            class="ani"
             href="https://npmjs.org/package/vlr.js"
             rel="noopener noreferrer"
             target="_blank"
