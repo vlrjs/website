@@ -3,12 +3,14 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="vlr.js">
-  <script>
-    $('#content').addClass('active')
-  </script>
   <div class="mainCnt cinzel">
     <div class="m-head"><span></span></div>
-    <div id="content" class="m-content ani">
+    <script is:inline>
+      $(function() {
+        $(".m-content").addClass("active")
+      });
+    </script>
+    <div class="m-content ani">
       <div class="m-top">
         <span class="m-left">
           <script is:inline>
