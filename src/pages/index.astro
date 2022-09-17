@@ -1,8 +1,5 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import latestVersion from "latest-version";
-
-const version = await latestVersion("vlr.js");
 ---
 
 <Layout title="vlr.js">
@@ -11,13 +8,22 @@ const version = await latestVersion("vlr.js");
     <div class="m-content">
       <div class="m-top">
         <span class="m-left">
+          <script is:inline>
+            var a = fetch("https://registry.npmjs.org/vlr.js/latest")
+              .then((res) => res.json())
+              .then((json) => {
+                const version = json.version;
+                const el = $("a#version");
+                el.html(`<b>Version</b> ${version}`);
+              });
+          </script>
           <a
+            id="version"
             href="https://npmjs.org/package/vlr.js"
             rel="noopener noreferrer"
             target="_blank"
           >
-            <b>Version:</b>
-            {version}
+            <b>Version:</b> 0.0.0
           </a>
         </span>
         <span class="m-right">
