@@ -3348,6 +3348,7 @@ const { title } = Astro.props as Props;
         margin: 0 auto 0 auto;
         padding-top: 48px;
         font-family: "noto serif jp";
+        margin-left: 80px;
       }
       .mainCnt .m-middle > h1 {
         padding-top: 14px;
@@ -3557,6 +3558,7 @@ const { title } = Astro.props as Props;
         display: flex;
         height: 84px;
         margin: auto;
+        user-select: none;
       }
       footer span {
         height: 24px;
@@ -3574,7 +3576,7 @@ const { title } = Astro.props as Props;
           <slot />
         </main>
         <footer>
-          <span>Copyright &copy; 2022, VLRjs.</span>
+          <span>Copyright &copy; 2022, <a>vlrjs</a>.</span>
         </footer>
       </div>
     </div>
