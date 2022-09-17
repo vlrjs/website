@@ -12,8 +12,12 @@ const { title } = Astro.props as Props;
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <title>{title}</title>
-    
-    <link rel="icon" type="image/png" href="https://i.ibb.co/7gFBDHh/vlr-js.png" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://i.ibb.co/7gFBDHh/vlr-js.png"
+    />
 
     <script
       src="https://code.jquery.com/jquery-3.6.1.min.js"
@@ -3560,6 +3564,13 @@ const { title } = Astro.props as Props;
         line-height: 1;
         text-align: center;
         margin: auto;
+      }
+      #version {
+        opacity: 0;
+        transition: 2s ease;
+      }
+      #version.active {
+        opacity: 1;
       }
     </style>
   </head>

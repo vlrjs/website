@@ -13,8 +13,9 @@ import Layout from "../layouts/Layout.astro";
               .then((res) => res.json())
               .then((json) => {
                 const version = json.version;
-                const el = $("a#version");
+                const el = $("  #version");
                 el.html(`<b>Version</b> ${version}`);
+                el.addClass("active");
               });
           </script>
           <a
@@ -23,7 +24,6 @@ import Layout from "../layouts/Layout.astro";
             rel="noopener noreferrer"
             target="_blank"
           >
-            <b>Version:</b> 0.0.0
           </a>
         </span>
         <span class="m-right">
