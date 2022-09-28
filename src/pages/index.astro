@@ -71,8 +71,7 @@ import Layout from "../layouts/Layout.astro";
             </span>
           </code>
         </div>
-        <h1 class="cinzel" id="apiRef"><a href="#apiRef">Api Reference</a></h1>
-        <h2 id="getPage"><a href="#getPage">getPage()</a></h2>
+        <h1 class="cinzel" id="usage"><a href="#usage">Usage</a></h1>
         <code class="extra">
           <span class="line"
             ><span style="color:#FF657C">import</span>
@@ -87,10 +86,21 @@ import Layout from "../layouts/Layout.astro";
             <span style="color:#FF657C">const</span>
             <span style="color:#D8DEE9">match =</span>
             <span style="color:#D8DEE9"
-              ><span style="color:#FF657C">await</span>&nbsp;VLR.</span
-            ><span style="color:#66ADFF">getPage</span><span
+              ><span style="color:#FF657C">await</span>&nbsp;VLR</span
+            ><span
               ><span style="color:#D8DEE9">(</span><span style="color:#16C082"
                 >'/6'</span
+              ><span style="color:#D8DEE9">);</span>
+            </span>
+          </span>
+          <br /><span class="line">
+            <span style="color:#FF657C">const</span>
+            <span style="color:#D8DEE9">forum =</span>
+            <span style="color:#D8DEE9"
+              ><span style="color:#FF657C">await</span>&nbsp;VLR</span
+            ><span
+              ><span style="color:#D8DEE9">(</span><span style="color:#16C082"
+                >'/1'</span
               ><span style="color:#D8DEE9">);</span>
             </span>
           </span>
@@ -102,76 +112,6 @@ import Layout from "../layouts/Layout.astro";
               >log<span
                 ><span style="color:#D8DEE9">(</span><span style="color:#D8DEE9"
                   >match</span
-                ><span style="color:#D8DEE9">);</span>
-              </span>
-            </span>
-          </span>
-          <br />
-        </code>
-        <h2 id="getMatches"><a href="#getMatches">getMatches()</a></h2>
-        <code class="extra">
-          <span class="line"
-            ><span style="color:#FF657C">import</span>
-            <span style="color:#D8DEE9">VLR</span>
-            <span style="color:#FF657C">from</span>
-            <span style="color:#16C082">'vlr.js'</span><span
-              style="color:#C7C5D3">;</span
-            >
-          </span>
-          <br />
-          <span class="line">
-            <span style="color:#FF657C">const</span>
-            <span style="color:#D8DEE9">matches =</span>
-            <span style="color:#D8DEE9"
-              ><span style="color:#FF657C">await</span>&nbsp;VLR.</span
-            ><span style="color:#66ADFF">getMatches</span><span
-              ><span style="color:#D8DEE9">();</span>
-            </span>
-          </span>
-          <br />
-          <br />
-          <span class="line">
-            <span style="color:#D8DEE9">console.</span><span
-              style="color:#66ADFF"
-              >log<span
-                ><span style="color:#D8DEE9">(</span><span style="color:#D8DEE9"
-                  >matches</span
-                ><span style="color:#D8DEE9">);</span>
-              </span>
-            </span>
-          </span>
-          <br />
-        </code>
-        <h2 id="getMatchResults">
-          <a href="#getMatchResults">getMatchResults()</a>
-        </h2>
-        <code class="extra">
-          <span class="line"
-            ><span style="color:#FF657C">import</span>
-            <span style="color:#D8DEE9">VLR</span>
-            <span style="color:#FF657C">from</span>
-            <span style="color:#16C082">'vlr.js'</span><span
-              style="color:#C7C5D3">;</span
-            >
-          </span>
-          <br />
-          <span class="line">
-            <span style="color:#FF657C">const</span>
-            <span style="color:#D8DEE9">matchResults =</span>
-            <span style="color:#D8DEE9"
-              ><span style="color:#FF657C">await</span>&nbsp;VLR.</span
-            ><span style="color:#66ADFF">getMatchResults</span><span
-              ><span style="color:#D8DEE9">();</span>
-            </span>
-          </span>
-          <br />
-          <br />
-          <span class="line">
-            <span style="color:#D8DEE9">console.</span><span
-              style="color:#66ADFF"
-              >log<span
-                ><span style="color:#D8DEE9">(</span><span style="color:#D8DEE9"
-                  >matchResults</span
                 ><span style="color:#D8DEE9">);</span>
               </span>
             </span>
