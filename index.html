@@ -1,17 +1,9 @@
----
-export interface Props {
-  title: string;
-}
-
-const { title } = Astro.props as Props;
----
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <title>{title}</title>
+    <title>vlr.js</title>
 
     <link
       rel="icon"
@@ -25,8 +17,7 @@ const { title } = Astro.props as Props;
       crossorigin="anonymous"
     ></script>
 
-    <style is:inline>
-      @charset "utf-8";
+    <style type="text/css">
       body,
       div,
       dl,
@@ -3057,9 +3048,7 @@ const { title } = Astro.props as Props;
 
       /*-----[[RESPONSIVE END]]-----*/
     </style>
-    <style is:inline>
-      @charset "utf-8";
-
+    <style type="text/css">
       html {
         font-size: 62.5% !important;
       }
@@ -3573,7 +3562,154 @@ const { title } = Astro.props as Props;
     <div id="topWrap" class="active">
       <div id="fullWrap" class="active">
         <main>
-          <slot />
+            <div class="mainCnt cinzel">
+    <div class="m-head"><span></span></div>
+    <script type="text/javascript">
+      $(function() {
+        $(".m-content").addClass("active")
+      });
+    </script>
+    <div class="m-content ani">
+      <div class="m-top">
+        <span class="m-left">
+          <script type="text/javascript">
+            var a = fetch("https://registry.npmjs.org/vlr.js/latest")
+              .then((res) => res.json())
+              .then((json) => {
+                const version = json.version;
+                const el = $("#version");
+                el.html(`<b>Version</b> ${version}`);
+              });
+          </script>
+          <a
+            id="version"
+            href="https://npmjs.org/package/vlr.js"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+          </a>
+        </span>
+        <span class="m-right">
+          <a
+            href="https://www.vlr.gg/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <b>VLR.GG</b>
+          </a>
+        </span>
+      </div>
+      <div class="m-middle">
+        <h1 class="cinzel" id="install"><a href="#install">Install</a></h1>
+        <div class="cinzel tabs needs-js">
+          <button id="npm" class="active">Npm</button>
+          <button id="yarn">Yarn</button>
+          <button id="pnpm">Pnpm</button>
+        </div>
+        <div id="_npm" style="display:block;" class="no-js">
+          <figcaption class="header"></figcaption>
+          <code class="extra">
+            <span class="line terminal">
+              <span class="npm">npm</span> install vlr.js
+            </span>
+          </code>
+        </div>
+        <div id="_yarn" class="no-js">
+          <figcaption class="header"></figcaption>
+          <code class="extra">
+            <span class="line terminal">
+              <span class="yarn">yarn</span> add vlr.js
+            </span>
+          </code>
+        </div>
+        <div id="_pnpm" class="no-js">
+          <figcaption class="header"></figcaption>
+          <code class="extra">
+            <span class="line terminal">
+              <span class="pnpm">pnpm</span> add vlr.js
+            </span>
+          </code>
+        </div>
+        <h1 class="cinzel" id="usage"><a href="#usage">Usage</a></h1>
+        <code class="extra">
+          <span class="line"
+            ><span style="color:#FF657C">import</span>
+            <span style="color:#D8DEE9">VLR</span>
+            <span style="color:#FF657C">from</span>
+            <span style="color:#16C082">'vlr.js'</span><span
+              style="color:#C7C5D3">;</span
+            >
+          </span>
+          <br />
+          <span class="line">
+            <span style="color:#FF657C">const</span>
+            <span style="color:#D8DEE9">match =</span>
+            <span style="color:#D8DEE9"
+              ><span style="color:#FF657C">await</span>&nbsp;VLR</span
+            ><span
+              ><span style="color:#D8DEE9">(</span><span style="color:#16C082"
+                >'/6'</span
+              ><span style="color:#D8DEE9">);</span>
+            </span>
+          </span>
+          <br /><span class="line">
+            <span style="color:#FF657C">const</span>
+            <span style="color:#D8DEE9">forum =</span>
+            <span style="color:#D8DEE9"
+              ><span style="color:#FF657C">await</span>&nbsp;VLR</span
+            ><span
+              ><span style="color:#D8DEE9">(</span><span style="color:#16C082"
+                >'/1'</span
+              ><span style="color:#D8DEE9">);</span>
+            </span>
+          </span>
+          <br />
+          <br />
+          <span class="line">
+            <span style="color:#D8DEE9">console.</span><span
+              style="color:#66ADFF"
+              >log<span
+                ><span style="color:#D8DEE9">(</span><span style="color:#D8DEE9"
+                  >match</span
+                ><span style="color:#D8DEE9">);</span>
+              </span>
+            </span>
+          </span>
+          <br />
+        </code>
+      </div>
+    </div>
+  </div>
+<script type="text/javascript">
+  document.getElementsByClassName("tabs")[0].classList.remove("needs-js");
+  document.getElementById("_npm").classList.remove("no-js");
+  document.getElementById("_yarn").classList.remove("no-js");
+  document.getElementById("_pnpm").classList.remove("no-js");
+  $("#npm").on("click", function () {
+    $("#npm").addClass("active");
+    $("#yarn").removeClass("active");
+    $("#pnpm").removeClass("active");
+    $("#_npm").show();
+    $("#_pnpm").hide();
+    $("#_yarn").hide();
+  });
+  $("#yarn").on("click", function () {
+    $("#yarn").addClass("active");
+    $("#npm").removeClass("active");
+    $("#pnpm").removeClass("active");
+    $("#_npm").hide();
+    $("#_pnpm").hide();
+    $("#_yarn").show();
+  });
+  $("#pnpm").on("click", function () {
+    $("#pnpm").addClass("active");
+    $("#yarn").removeClass("active");
+    $("#npm").removeClass("active");
+    $("#_npm").hide();
+    $("#_pnpm").show();
+    $("#_yarn").hide();
+  });
+</script>
         </main>
         <footer>
           <span>Copyright &copy; 2022, <a>vlrjs</a>.</span>
